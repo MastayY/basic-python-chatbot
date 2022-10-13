@@ -1,7 +1,24 @@
 import random
 import time
 
-command = ["tell me about you", "show command list", "say hello", "change my name", "tell me a joke", "lets play minigame", "good bye"]
+command = ["tell me about you", "show command list", "say hello", "change my name", "tell me a joke", "lets play minigame", "give me a fact", "good bye"]
+
+facts = [
+    ["Hot water will turn into ice faster than cold water."],
+    ["The Mona Lisa has no eyebrows."],
+    ["Ant's take rest for around 8 Minutes in 12 hour period."],
+    ["It is physically impossible for pigs to look up into the sky."],
+    ["It is impossible for most people to lick their own elbow."],
+    ["A crocodile cannot stick its tongue out."],
+    ["1 in 5,000 north Atlantic lobsters are born bright blue."],
+    ["Falling in love is like being on drugs."],
+    ["A happy heart is a healthy heart."],
+    ["Every second, your body produces 25 million new cells."],
+    ["The best place in the world to see rainbows is in Hawaii."],
+    ["Indonesia is home to over 100 endangered animals"],
+    ["The world’s biggest flower lives in Indonesia"],
+    ["Indonesia is made up of 17,504 islands"]
+]
 
 jokes = [
     ["Why do ducks have feathers?", "to cover their butt quacks!:)"],
@@ -16,15 +33,15 @@ jokes = [
 
 call = 0
 
-print("\nTurning On..")
+print("\nTurning On..")                                                           
 time.sleep(2)
-print("\n----------------------------------------\nName\t: Rimuwu >_< ChatBot\nVersion\t: 1.0\nAuthor\t: MastayY ( Nasywan )\nGithub\t: https://github.com/MastayY\n----------------------------------------")
+print("\n----------------------------------------\nName\t: Rimuwu >_< Bot\nVersion\t: 1.0\nAuthor\t: MastayY ( Nasywan )\nGithub\t: https://github.com/MastayY\n----------------------------------------")
 time.sleep(3)
 print("\nRimuwu >_< is turned on and ready to serve you..")
 time.sleep(2)
-print("\nHello Guest, my name is Rimuwu >_< i'm a chatbot with feelings ( maybe:v ). Can i know your name?")
+print("\nHello Guest, my name is Rimuwu >_< i'm a bot with feelings ( maybe:v ). Can i know your name?")
 time.sleep(2)
-name = input("Hello Rimuwu >_< you can call me\n↦ ")
+name = input("Hello Rimuwu >_< you can call me ")
 time.sleep(2)
 print("\nOkay so your name is", name, ". Nice to meet you", name, "I'm here to make your day feel better >_<\nBelow is a list of commands that you can use")
 time.sleep(1)
@@ -99,7 +116,7 @@ while True:
                 else:
                     print("Input Error!")
 
-            print("=========== Score =============\nYour Score\t:",p_score,"\Rimuwu Score\t:", c_score,"\n================================")
+            print("=========== Score =============\nYour Score\t:",p_score,"\nRimuwu Score\t:", c_score,"\n================================")
         elif (minigame == 2):
             print("[ GUESS THE DICE NUMBER ]\n")
             score = 0
@@ -123,11 +140,15 @@ while True:
                     print("No, You wrong")
                 rounds -= 1
             
-            print("=========== Score =============\nScore\t:",score,"\n================================")
+            print("=========== Score =============\nScore\t:",score,"\n===============================")
             
         else:
             print("ERROR : Please input only from the list")
     elif (userCommand == command[6]):
+        fact = random.randint(0, 13)
+        
+        print("\n[ INTERESTING FACT ]\n↦", facts[fact][0])
+    elif (userCommand == command[7]):
         print("Good Bye", name, "Thanks for Using Rimuwu >_<\nTurning off...")
         time.sleep(3)
         break
