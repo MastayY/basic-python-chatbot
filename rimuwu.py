@@ -1,7 +1,7 @@
 import random
 import time
 
-command = ["tell me about you", "show command list", "say hello", "change my name", "tell me a joke", "lets play minigame", "give me a fact", "good bye"]
+command = ["tell me about you", "show command list", "say hello", "change my name", "tell me a joke", "play minigame", "give me a fact", "good bye"]
 
 facts = [
     ["Hot water will turn into ice faster than cold water."],
@@ -137,7 +137,7 @@ while True:
                     print("Cool, You Right")
                     score += 1
                 else:
-                    print("No, You wrong")
+                    print("No, You wrong. The answer is", number)
                 rounds -= 1
             
             print("=========== Score =============\nScore\t:",score,"\n===============================")
